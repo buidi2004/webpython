@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>IVIE Wedding Studio | Váy Cưới & Dịch Vụ Cưới Cao Cấp</title>
+  <meta name="description" content="IVIE Wedding Studio - Studio cưới hàng đầu với hơn 500+ cặp đôi hạnh phúc. Cho thuê váy cưới, vest, áo dài, dịch vụ trang điểm và chụp ảnh cưới chuyên nghiệp." />
+  <meta name="keywords" content="váy cưới, studio cưới, cho thuê váy cưới, trang điểm cô dâu, chụp ảnh cưới, IVIE, wedding studio, áo dài cưới, vest cưới" />
+  <meta name="author" content="IVIE Wedding Studio" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ivie-frontend.onrender.com/" />
+  <meta property="og:title" content="IVIE Wedding Studio | Váy Cưới & Dịch Vụ Cưới Cao Cấp" />
+  <meta property="og:description" content="Studio cưới hàng đầu với hơn 500+ cặp đôi hạnh phúc. Cho thuê váy cưới, vest, áo dài và dịch vụ cưới trọn gói." />
+  <meta property="og:image" content="https://ivie-frontend.onrender.com/images/og-image.jpg" />
+  <meta property="og:locale" content="vi_VN" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="IVIE Wedding Studio | Váy Cưới & Dịch Vụ Cưới Cao Cấp" />
+  <meta name="twitter:description" content="Studio cưới hàng đầu với hơn 500+ cặp đôi hạnh phúc." />
+  <meta name="twitter:image" content="https://ivie-frontend.onrender.com/images/og-image.jpg" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ivie-frontend.onrender.com/" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#c9a86c" />
+  <meta name="msapplication-TileColor" content="#c9a86c" />
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://ivie-backend.onrender.com" />
+  <link rel="dns-prefetch" href="https://ivie-backend.onrender.com" />
+  
+  <!-- Preload critical fonts - Be Vietnam Pro cho tiếng Việt + Playfair Display cho tiêu đề + Great Vibes cho highlight -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Great+Vibes&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Great+Vibes&display=swap" /></noscript>
+  
+  <!-- Google Analytics 4 - Defer loading -->
+  <!-- HƯỚNG DẪN: Thay G-XXXXXXXXXX bằng Measurement ID của bạn -->
+  <script>
+    // Defer GA4 loading để không block render
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+        script.async = true;
+        document.head.appendChild(script);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+      }, 2000); // Delay 2s sau khi page load
+    });
+  </script>
+  
+  <!-- Critical CSS inline -->
+  <style>
+    /* Critical CSS - Above the fold */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Be Vietnam Pro',system-ui,-apple-system,sans-serif;background:#fff;color:#1a1a1a}
+    #root{min-height:100vh}
+    .loading-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;background:#fff}
+    .loading-spinner{width:40px;height:40px;border:3px solid #f3f3f3;border-top:3px solid #c9a86c;border-radius:50%;animation:spin 1s linear infinite}
+    @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <!-- Loading placeholder để cải thiện FCP -->
+    <div class="loading-screen">
+      <div class="loading-spinner"></div>
+    </div>
+  </div>
+  <script type="module" src="/src/chinh.jsx"></script>
+</body>
+
+</html>

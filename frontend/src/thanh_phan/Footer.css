@@ -1,0 +1,690 @@
+/* ===== FOOTER CHÂN TRANG ===== */
+.chan-trang {
+    position: relative;
+    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+    color: #ffffff;
+    padding: 3rem 1rem 2rem;
+    overflow: hidden;
+    min-height: 280px;
+}
+
+.chan-trang-noi-dung {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.chan-trang-cot {
+    flex: 1;
+    min-width: 250px;
+}
+
+.chan-trang-cot h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+.chan-trang-cot h4 {
+    font-size: 1.2rem;
+    color: #d4af37;
+    margin-bottom: 0.8rem;
+}
+
+.chan-trang-cot p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0.5rem 0;
+}
+
+.chan-trang-cot ul {
+    list-style: none;
+    padding: 0;
+}
+
+.chan-trang-cot ul li {
+    margin: 0.5rem 0;
+}
+
+.chan-trang-cot ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.chan-trang-cot ul li a:hover {
+    color: #d4af37;
+}
+
+.mang-xa-hoi {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.mang-xa-hoi a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mang-xa-hoi a:hover {
+    color: #d4af37;
+}
+
+.chan-trang-ban-quyen {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.chan-trang-ban-quyen p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ===== FOOTER WRAPPER (OLD - KEPT FOR COMPATIBILITY) ===== */
+.footer-wrapper {
+    position: relative;
+    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+    color: #ffffff;
+    padding: 3rem 1rem 2rem;
+    overflow: hidden;
+    min-height: 320px;
+}
+
+/* ===== NỘI DUNG TRUNG TÂM ===== */
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    gap: 1rem;
+}
+
+.footer-logo {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #d4af37;
+    letter-spacing: 0.3em;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+}
+
+.footer-slogan {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    font-style: italic;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-nav a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    padding: 0.25rem 0.5rem;
+}
+
+.footer-nav a:hover {
+    color: #d4af37;
+}
+
+.nav-divider {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.8rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.footer-social a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: #d4af37;
+    color: #1a1a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0.5rem 0 0;
+}
+
+/* ===== TRANG TRÍ CÀNH MAI ===== */
+.trang-tri-trai,
+.trang-tri-phai {
+    position: absolute;
+    bottom: 0;
+    width: 450px;
+    height: 320px;
+    pointer-events: none;
+    z-index: 1;
+    overflow: visible;
+}
+
+.trang-tri-trai {
+    left: -20px;
+}
+
+.trang-tri-phai {
+    right: -20px;
+}
+
+/* ===== CÀNH MAI CONTAINER ===== */
+.canh-mai-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.canh-mai-svg {
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    height: 300px;
+    overflow: visible;
+}
+
+.canh-mai-trai .canh-mai-svg {
+    left: 0;
+}
+
+.canh-mai-phai .canh-mai-svg {
+    right: 0;
+    transform: scaleX(-1);
+}
+
+/* ===== ANIMATION GIÓ ĐUNG ĐƯA - MẠNH VÀ RÕ RÀNG ===== */
+
+/* Animation gió chính - toàn bộ cành đung đưa */
+@keyframes gioDungDuaChinh {
+    0% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(2deg);
+    }
+    30% {
+        transform: rotate(-1.5deg);
+    }
+    45% {
+        transform: rotate(1.8deg);
+    }
+    60% {
+        transform: rotate(-1deg);
+    }
+    75% {
+        transform: rotate(1.5deg);
+    }
+    90% {
+        transform: rotate(-0.5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Animation cành phụ - đung đưa mạnh hơn */
+@keyframes gioCanhPhu1 {
+    0%,
+    100% {
+        transform: rotate(0deg) translateX(0);
+    }
+    20% {
+        transform: rotate(4deg) translateX(3px);
+    }
+    40% {
+        transform: rotate(-2deg) translateX(-2px);
+    }
+    60% {
+        transform: rotate(3deg) translateX(2px);
+    }
+    80% {
+        transform: rotate(-1.5deg) translateX(-1px);
+    }
+}
+
+@keyframes gioCanhPhu2 {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(3.5deg);
+    }
+    50% {
+        transform: rotate(-2.5deg);
+    }
+    75% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes gioCanhPhu3 {
+    0%,
+    100% {
+        transform: rotate(0deg) translateY(0);
+    }
+    33% {
+        transform: rotate(5deg) translateY(-2px);
+    }
+    66% {
+        transform: rotate(-3deg) translateY(1px);
+    }
+}
+
+/* Animation hoa rung theo gió */
+@keyframes hoaRungGio {
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+    20% {
+        transform: rotate(8deg) scale(1.05);
+    }
+    40% {
+        transform: rotate(-5deg) scale(0.98);
+    }
+    60% {
+        transform: rotate(6deg) scale(1.03);
+    }
+    80% {
+        transform: rotate(-3deg) scale(1);
+    }
+}
+
+/* Animation cánh hoa lung linh */
+@keyframes canhHoaLungLinh {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.85;
+        transform: scale(1.08);
+    }
+}
+
+/* Animation nụ hoa lắc lư */
+@keyframes nuHoaLacLu {
+    0%,
+    100% {
+        transform: rotate(0deg) translateX(0);
+    }
+    25% {
+        transform: rotate(6deg) translateX(2px);
+    }
+    50% {
+        transform: rotate(-4deg) translateX(-1px);
+    }
+    75% {
+        transform: rotate(3deg) translateX(1px);
+    }
+}
+
+/* ===== ÁP DỤNG ANIMATION ===== */
+
+/* Nhóm cành mai chính */
+.canh-mai-group {
+    transform-origin: 0% 100%;
+    animation: gioDungDuaChinh 6s ease-in-out infinite;
+}
+
+.canh-chinh {
+    transform-origin: 0 280px;
+}
+
+/* Các cành phụ với animation riêng */
+.canh-phu-1 {
+    transform-origin: 80px 225px;
+    animation: gioCanhPhu1 4s ease-in-out infinite;
+}
+
+.canh-phu-2 {
+    transform-origin: 180px 155px;
+    animation: gioCanhPhu2 5s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.canh-phu-3 {
+    transform-origin: 280px 100px;
+    animation: gioCanhPhu3 3.5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.canh-phu-4 {
+    transform-origin: 50px 260px;
+    animation: gioCanhPhu1 4.5s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+
+/* Hoa mai với animation rung */
+.hoa-mai {
+    animation: hoaRungGio 3s ease-in-out infinite;
+}
+
+.hoa-1 {
+    animation-delay: 0s;
+}
+.hoa-2 {
+    animation-delay: 0.3s;
+}
+.hoa-3 {
+    animation-delay: 0.6s;
+}
+.hoa-4 {
+    animation-delay: 0.9s;
+}
+.hoa-5 {
+    animation-delay: 1.2s;
+}
+.hoa-6 {
+    animation-delay: 0.2s;
+}
+.hoa-7 {
+    animation-delay: 0.5s;
+}
+.hoa-8 {
+    animation-delay: 0.8s;
+}
+
+/* Cánh hoa lung linh */
+.canh-hoa {
+    animation: canhHoaLungLinh 2s ease-in-out infinite;
+}
+
+.canh-hoa-group {
+    animation: hoaRungGio 2.5s ease-in-out infinite;
+}
+
+/* Nụ hoa lắc lư */
+.nu-hoa {
+    animation: nuHoaLacLu 3.5s ease-in-out infinite;
+}
+
+.nu-1 {
+    animation-delay: 0.1s;
+}
+.nu-2 {
+    animation-delay: 0.4s;
+}
+.nu-3 {
+    animation-delay: 0.7s;
+}
+.nu-4 {
+    animation-delay: 0.2s;
+}
+.nu-5 {
+    animation-delay: 0.5s;
+}
+.nu-6 {
+    animation-delay: 0.8s;
+}
+
+/* ===== CÁNH HOA RƠI ===== */
+.canh-hoa-roi-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.canh-hoa-roi {
+    position: absolute;
+    top: -20px;
+    animation: hoaRoi 8s linear infinite;
+    opacity: 0;
+}
+
+@keyframes hoaRoi {
+    0% {
+        transform: translateY(0) rotate(0deg) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.9;
+    }
+    50% {
+        transform: translateY(160px) rotate(180deg) translateX(20px);
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(320px) rotate(360deg) translateX(-10px);
+        opacity: 0;
+    }
+}
+
+/* ===== HẠT VÀNG LẤP LÁNH ===== */
+.hat-vang-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.hat-vang {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(
+        circle,
+        #ffd700 0%,
+        #ffa500 50%,
+        transparent 70%
+    );
+    border-radius: 50%;
+    animation: twinkle 2s ease-in-out infinite;
+    box-shadow:
+        0 0 6px #ffd700,
+        0 0 10px #ffa500;
+}
+
+@keyframes twinkle {
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+/* ===== HOVER EFFECTS - tăng tốc animation khi hover ===== */
+.footer-wrapper:hover .canh-mai-group {
+    animation-duration: 4s;
+}
+
+.footer-wrapper:hover .canh-phu-1,
+.footer-wrapper:hover .canh-phu-2,
+.footer-wrapper:hover .canh-phu-3,
+.footer-wrapper:hover .canh-phu-4 {
+    animation-duration: 2.5s;
+}
+
+.footer-wrapper:hover .hoa-mai {
+    animation-duration: 2s;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .trang-tri-trai,
+    .trang-tri-phai {
+        width: 380px;
+        height: 280px;
+    }
+
+    .canh-mai-svg {
+        width: 350px;
+        height: 260px;
+    }
+}
+
+@media (max-width: 992px) {
+    .trang-tri-trai,
+    .trang-tri-phai {
+        width: 320px;
+        height: 240px;
+        opacity: 0.9;
+    }
+
+    .canh-mai-svg {
+        width: 300px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-wrapper {
+        padding: 2rem 1rem 1.5rem;
+        min-height: 280px;
+    }
+
+    .footer-logo {
+        font-size: 2rem;
+    }
+
+    .footer-slogan {
+        font-size: 0.85rem;
+    }
+
+    .footer-nav {
+        gap: 0.3rem;
+    }
+
+    .footer-nav a {
+        font-size: 0.8rem;
+    }
+
+    .trang-tri-trai,
+    .trang-tri-phai {
+        width: 250px;
+        height: 200px;
+        opacity: 0.8;
+    }
+
+    .canh-mai-svg {
+        width: 230px;
+        height: 180px;
+    }
+
+    .trang-tri-trai {
+        left: -30px;
+    }
+
+    .trang-tri-phai {
+        right: -30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-nav .nav-divider {
+        display: none;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .trang-tri-trai,
+    .trang-tri-phai {
+        width: 180px;
+        height: 150px;
+        opacity: 0.6;
+    }
+
+    .canh-mai-svg {
+        width: 160px;
+        height: 130px;
+    }
+
+    .trang-tri-trai {
+        left: -40px;
+    }
+
+    .trang-tri-phai {
+        right: -40px;
+    }
+
+    /* Giảm animation trên mobile */
+    .canh-mai-group {
+        animation-duration: 8s;
+    }
+
+    .canh-phu-1,
+    .canh-phu-2,
+    .canh-phu-3,
+    .canh-phu-4 {
+        animation-duration: 6s;
+    }
+
+    .canh-hoa-roi-container {
+        display: none;
+    }
+}
+
+/* ===== REDUCE MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .canh-mai-group,
+    .canh-phu-1,
+    .canh-phu-2,
+    .canh-phu-3,
+    .canh-phu-4,
+    .hoa-mai,
+    .canh-hoa,
+    .canh-hoa-group,
+    .nu-hoa,
+    .canh-hoa-roi,
+    .hat-vang {
+        animation: none !important;
+    }
+}

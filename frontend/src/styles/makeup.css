@@ -1,0 +1,559 @@
+/* Makeup Services Page Styles */
+
+.makeup-hero {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
+    padding-top: 120px;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+/* Services Overview */
+.services-overview {
+    padding: 5rem 0;
+    background: var(--light);
+}
+
+.services-grid-makeup {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-makeup-card {
+    background: var(--light);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    position: relative;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.service-makeup-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.service-makeup-card.featured {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, #ffffff 0%, #faf8f5 100%);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: var(--light);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: var(--shadow-md);
+}
+
+.service-makeup-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.service-makeup-card h3 {
+    font-family: var(--font-heading-vn);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.service-makeup-card>p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.service-features {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+}
+
+.service-features li {
+    padding: 0.6rem 0;
+    color: var(--text-light);
+    position: relative;
+    padding-left: 2rem;
+}
+
+.service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.service-price {
+    font-family: var(--font-heading-vn);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 1rem;
+}
+
+/* Expert Team */
+.expert-team {
+    padding: 5rem 0;
+}
+
+.experts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.expert-card {
+    background: var(--light);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.expert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.expert-image {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+}
+
+/* Expert Badge - TOP ARTIST, MASTER */
+.expert-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 14px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    z-index: 10;
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.expert-badge.top {
+    background: linear-gradient(135deg, #c9a86c 0%, #d4b896 100%);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(201, 168, 108, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.expert-badge.master {
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.expert-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.expert-card:hover .expert-image img {
+    transform: scale(1.1);
+}
+
+.expert-info {
+    padding: 1.5rem;
+}
+
+.expert-name {
+    font-family: var(--font-heading-vn);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: var(--dark);
+}
+
+.expert-title {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.expert-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.stat {
+    flex: 1;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-heading-vn);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.expert-bio {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.expert-specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.specialty {
+    background: var(--secondary);
+    color: var(--dark);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-grid-makeup {
+        grid-template-columns: 1fr;
+    }
+
+    .experts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Video Showcase Section */
+.video-showcase-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.video-showcase-section .section-title {
+    color: #c9a86c;
+}
+
+.video-showcase-section .section-subtitle {
+    color: #888;
+}
+
+.video-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.video-container-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.video-overlay-blur {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: linear-gradient(135deg, rgba(201, 168, 108, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+    filter: blur(20px);
+    z-index: 0;
+}
+
+.video-frame {
+    position: relative;
+    z-index: 1;
+    aspect-ratio: 9/16;
+    max-height: 500px;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid rgba(201, 168, 108, 0.3);
+}
+
+.video-frame iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+    z-index: 2;
+    text-align: center;
+}
+
+.video-info-overlay h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 0 5px;
+    font-family: var(--font-heading-vn);
+    font-weight: 600;
+}
+
+.video-info-overlay p {
+    color: #c9a86c;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.video-description {
+    color: #fff;
+}
+
+.video-description h3 {
+    font-size: 2rem;
+    color: #c9a86c;
+    margin-bottom: 1rem;
+    font-family: var(--font-heading-vn);
+    font-weight: 600;
+}
+
+.video-description > p {
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.artist-highlights {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.artist-highlights li {
+    padding: 0.8rem 0;
+    color: #ddd;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 1rem;
+}
+
+/* Before & After Section */
+.before-after-section {
+    padding: 5rem 0;
+    background: #faf8f5;
+}
+
+.before-after-section .section-title {
+    color: #333;
+}
+
+.before-after-section .section-subtitle {
+    color: #666;
+}
+
+.before-after-showcase {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.before-after-main {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.ba-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.ba-before, .ba-after {
+    position: relative;
+    flex: 1;
+    max-width: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.ba-before img, .ba-after img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    display: block;
+}
+
+.ba-label {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.ba-divider {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #c9a86c 0%, #d4b896 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(201, 168, 108, 0.4);
+}
+
+.ba-info {
+    text-align: center;
+}
+
+.ba-info h4 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0 0 5px;
+    font-family: var(--font-heading-vn);
+    font-weight: 600;
+}
+
+.ba-info p {
+    color: #c9a86c;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.before-after-thumbnails {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.ba-thumb {
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+
+.ba-thumb:hover, .ba-thumb.active {
+    opacity: 1;
+}
+
+.ba-thumb.active {
+    transform: scale(1.05);
+}
+
+.ba-thumb img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.ba-thumb.active img {
+    border-color: #c9a86c;
+}
+
+.ba-thumb span {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.ba-thumb.active span {
+    color: #c9a86c;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .video-showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .video-frame {
+        max-height: 400px;
+    }
+    
+    .video-description {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .ba-image-container {
+        flex-direction: column;
+    }
+    
+    .ba-before, .ba-after {
+        max-width: 100%;
+    }
+    
+    .ba-divider {
+        transform: rotate(90deg);
+    }
+    
+    .before-after-thumbnails {
+        flex-wrap: wrap;
+    }
+    
+    .ba-thumb img {
+        width: 80px;
+        height: 80px;
+    }
+}

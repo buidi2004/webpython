@@ -1,0 +1,276 @@
+:root {
+  /* Colors - Cải thiện độ tương phản WCAG AA */
+  --primary: #c9a86c; /* Gold - đủ contrast trên nền trắng */
+  --primary-dark: #9a7b4f; /* Darker gold cho text */
+  --secondary: #faedcd;
+  --accent: #6b8e5a; /* Darker green cho contrast */
+  --dark: #1a1a1a;
+  --light: #ffffff;
+  --text: #2d2d2d; /* Darker text cho contrast */
+  --text-light: #555555; /* Darker light text */
+  --text-muted: #666666;
+  --border: #d5d5d5;
+
+  /* Typography - Font đồng bộ toàn web */
+  /* Lưu ý: Playfair Display không hỗ trợ đầy đủ dấu tiếng Việt (thiếu dấu ngã) */
+  /* Dùng Be Vietnam Pro cho tiêu đề tiếng Việt để đảm bảo hiển thị đúng */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-heading-vn: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-cursive: 'Great Vibes', cursive;
+
+  /* Spacing */
+  --container-width: 1200px;
+  --header-height: 80px;
+
+  /* Touch targets - Minimum 44x44px cho accessibility */
+  --touch-target-min: 44px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+  /* Transitions */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  /* White background for golden leaves to stand out */
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text);
+  background-color: transparent;
+  /* Changed to transparent to show HieuUngLaRoi canvas */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading-vn);
+  color: var(--dark);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Components */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  min-height: var(--touch-target-min); /* Accessibility: touch target */
+  min-width: var(--touch-target-min);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: var(--transition);
+  font-size: 0.9rem;
+  border-radius: 50px;
+}
+
+.btn-primary {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary);
+  color: var(--light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  border: 1px solid var(--dark);
+  color: var(--dark);
+}
+
+.btn-outline:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.card {
+  background: var(--light);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Layout */
+main {
+  min-height: 100vh;
+  padding-top: var(--header-height);
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+
+/* Focus states cho keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Touch targets - minimum 44x44px */
+a, button, input[type="button"], input[type="submit"], 
+input[type="checkbox"], input[type="radio"], select {
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --text: #000000;
+    --text-light: #333333;
+    --border: #000000;
+  }
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+
+/* GPU acceleration for animations */
+.hero-slide,
+.fade-in-section,
+[class*="animate"] {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Contain paint for better performance */
+.card,
+.product-card-new,
+.service-card {
+  contain: layout style paint;
+}
+
+/* Image optimization hints */
+img {
+  content-visibility: auto;
+}
+
+/* Lazy load images below fold */
+img[loading="lazy"] {
+  background-color: #f5f5f5;
+}
